@@ -18,7 +18,7 @@ def find_suitable_orders(orig_order, orders):
 
         additional_distance = dist_to_order_start + dist_to_order + dist_to_order_end - orig_dist
         total_dist = additional_distance + orig_dist
-        if additional_distance/2 <= orig_dist:
+        if additional_distance*2 <= orig_dist:
             suitable_orders.append((order, additional_distance))
             
     suitable_orders.sort(key=lambda x: x[1])
